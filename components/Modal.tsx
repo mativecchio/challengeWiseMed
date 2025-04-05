@@ -8,7 +8,7 @@ export default Modal;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection:'column',
+    flexDirection: "column",
     borderRadius: 5,
     borderWidth: 1,
     borderColor: "#719EC0",
