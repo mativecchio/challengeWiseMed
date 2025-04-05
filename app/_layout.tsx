@@ -47,8 +47,7 @@ export default function RootLayout() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignSelf: "center",
-    justifyContent: "center",
-    minWidth: 250,
+    alignItems:'center',
+    justifyContent:'center'
   },
 });

@@ -12,6 +12,7 @@ export default Modal;
 
 const styles = StyleSheet.create({
   container: {
+    alignSelf:'center',
     flexDirection: "column",
     borderRadius: 5,
     borderWidth: 1,
