@@ -1,6 +1,10 @@
+import { FC, ReactNode } from "react";
 import { StyleSheet, View } from "react-native";
 
-const Modal = ({ children }: any) => {
+type Props = {
+  children?: ReactNode;
+};
+const Modal: FC<Props> = ({ children }) => {
   return <View style={styles.container}>{children}</View>;
 };
 

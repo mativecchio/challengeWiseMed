@@ -1,11 +1,10 @@
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Modal from "@/components/Modal";
-import PatientInfo from "@/components/PatientInfo";
-import CustomDropdown from "@/components/CustomDropdown";
 import PatientCard from "@/components/PatientCard";
+import { Option } from "@/types.d";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -14,7 +13,7 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     Poppins: require("../assets/fonts/Poppins-Regular.ttf"),
   });
-  const [emergencyKinds, setEmergencyKinds] = useState([]);
+  const [emergencyKinds, setEmergencyKinds] = useState<Option[]>([]);
 
   const getOptions = async () => {
     const response = await fetch(

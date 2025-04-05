@@ -1,6 +1,12 @@
+import { FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const PatientInfo = ({ label, value }: any) => {
+type Props = {
+  value: string;
+  label: string;
+};
+
+const PatientInfo: FC<Props> = ({ label, value }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}: </Text>

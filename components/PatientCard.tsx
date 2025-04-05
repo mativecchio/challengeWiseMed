@@ -1,8 +1,14 @@
+import { FC } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import PatientInfo from "./PatientInfo";
 import CustomDropdown from "./CustomDropdown";
+import { Option } from "../types.d";
 
-const PatientCard = ({ emergencyKinds }: { emergencyKinds: any[] }) => {
+type Props = {
+  emergencyKinds: Option[];
+};
+
+const PatientCard: FC<Props> = ({ emergencyKinds }) => {
   const boneIcon = require("../assets/images/ico-joints-bone.png");
   const anestesiaIcon = require("../assets/images/ico-anestesia.png");
   const cardioIcon = require("../assets/images/ico-cardio.png");
